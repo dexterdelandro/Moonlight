@@ -57,55 +57,12 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\ArriveAtPoint.cs" />
      <Compile Include="Assets\Scripts\Candle.cs" />
-     <Compile Include="Assets\Scripts\Pause.cs" />
      <Compile Include="Assets\Scripts\PickUpCandle.cs" />
      <Compile Include="Assets\Scripts\PlayerBehavior.cs" />
      <Compile Include="Assets\Scripts\TimedDisappearance.cs" />
      <Compile Include="Assets\True_Horror_Creatures\Horror_creature1_v1.2\scripts\THC1_ctrl.cs" />
-<<<<<<< HEAD
-     <None Include="Assets\Bed &amp; Bath Furniture Pack\Documentation.txt" />
-=======
-     <None Include="Assets\DreamForestTree\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
-     <None Include="Assets\DreamForestTree\PostProcessing\Resources\Shaders\GrainGen.shader" />
-     <None Include="Assets\FirstPersion AIO Pack\DemoScene\Working Materials\GlassBumpedDistort.shader" />
-     <None Include="Assets\DreamForestTree\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
-     <None Include="Assets\DreamForestTree\PostProcessing\Resources\Shaders\FXAA3.cginc" />
-     <None Include="Assets\FirstPersion AIO Pack\README.txt" />
-     <None Include="Assets\DreamForestTree\PostProcessing\Resources\Shaders\EyeAdaptation.shader" />
-     <None Include="Assets\DreamForestTree\PostProcessing\Editor Resources\UI\CurveBackground.shader" />
-     <None Include="Assets\DreamForestTree\PostProcessing\Resources\Shaders\BuiltinDebugViews.shader" />
->>>>>>> parent of 3a05246d... continued furnishing basement/first floor
      <None Include="Assets\paladin\shaders\pbrDoublesided.shader" />
      <None Include="Assets\Knight\shaders\doublesidedshader.shader" />
-<<<<<<< HEAD
-     <None Include="Assets\Soja Exiles\Bar &amp; Liquor Cabinets\Message For You Please Read Me.txt" />
-=======
-     <None Include="Assets\DreamForestTree\PostProcessing\Resources\Shaders\ACES.cginc" />
-     <None Include="Assets\DreamForestTree\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
-     <None Include="Assets\DreamForestTree\PostProcessing\Resources\Shaders\AmbientOcclusion.shader" />
-     <None Include="Assets\DreamForestTree\IMPORTANT.txt" />
-     <None Include="Assets\DreamForestTree\PostProcessing\Resources\Shaders\FXAA.shader" />
-     <None Include="Assets\DreamForestTree\PostProcessing\Resources\Shaders\ScreenSpaceRaytrace.cginc" />
-     <None Include="Assets\DreamForestTree\PostProcessing\Resources\Shaders\Tonemapping.cginc" />
-     <None Include="Assets\DreamForestTree\PostProcessing\Resources\Shaders\Fog.shader" />
-     <None Include="Assets\DreamForestTree\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />
-     <None Include="Assets\DreamForestTree\PostProcessing\Resources\Shaders\MotionBlur.shader" />
-     <None Include="Assets\DreamForestTree\PostProcessing\Resources\Shaders\DiskKernels.cginc" />
-     <None Include="Assets\DreamForestTree\PostProcessing\Resources\Bluenoise64\COPYING.txt" />
-     <None Include="Assets\DreamForestTree\PostProcessing\Editor Resources\UI\Trackball.shader" />
-     <None Include="Assets\DreamForestTree\PostProcessing\Editor Resources\Monitors\WaveformRender.shader" />
-     <None Include="Assets\DreamForestTree\PostProcessing\Resources\Shaders\Common.cginc" />
-     <None Include="Assets\DreamForestTree\PostProcessing\Editor Resources\Monitors\VectorscopeRender.shader" />
-     <None Include="Assets\DreamForestTree\PostProcessing\Resources\Shaders\Bloom.shader" />
-     <None Include="Assets\DreamForestTree\PostProcessing\Resources\Shaders\Uber.shader" />
-     <None Include="Assets\DreamForestTree\PostProcessing\Resources\Shaders\DepthOfField.shader" />
-     <None Include="Assets\DreamForestTree\PostProcessing\Resources\Shaders\TAA.shader" />
-     <None Include="Assets\DreamForestTree\PostProcessing\Resources\Shaders\Blit.shader" />
-     <None Include="Assets\DreamForestTree\PostProcessing\Resources\Shaders\Bloom.cginc" />
-     <None Include="Assets\DreamForestTree\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
-     <None Include="Assets\SkySerie Freebie\Hdri setup.txt" />
-     <None Include="Assets\DreamForestTree\PostProcessing\Resources\Shaders\DepthOfField.cginc" />
->>>>>>> parent of 3a05246d... continued furnishing basement/first floor
      <None Include="Assets\True_Horror_Creatures\Horror_creature1_v1.2\THC1_readme.txt" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -290,18 +247,6 @@
  <Reference Include="UnityEditor">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.14f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
  </Reference>
-<<<<<<< HEAD
- <Reference Include="Unity.Analytics.Editor">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/Project-3/Project 3/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Analytics.Tracker">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/Project-3/Project 3/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Tracker.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/Project-3/Project 3/Library/PackageCache/com.unity.analytics@3.3.5/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
- </Reference>
-=======
->>>>>>> parent of 3a05246d... continued furnishing basement/first floor
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.14f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
  </Reference>
@@ -657,101 +602,49 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.14f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/Project-3/Project 3/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Monetization">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/Project-3/Project 3/Library/ScriptAssemblies/UnityEngine.Monetization.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.multiplayer-hlapi.Editor">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/Project-3/Project 3/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
+ <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProGrids">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
+ <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/Project-3/Project 3/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProBuilder">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/Project-3/Project 3/Library/ScriptAssemblies/UnityEngine.Advertisements.dll</HintPath>
+ <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProBuilder.Editor">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
+ <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+ <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProGrids.Editor">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
+ <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/Project-3/Project 3/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/Project-3/Project 3/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/Project-3/Project 3/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
-<<<<<<< HEAD
- <HintPath>C:/Users/dexte/OneDrive/Desktop/Project-3/Project 3/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.multiplayer-weaver.Editor">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/Project-3/Project 3/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.XR.LegacyInputHelpers">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/Project-3/Project 3/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+ <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/Project-3/Project 3/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/Project-3/Project 3/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/Project-3/Project 3/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.SpatialTracking">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/Project-3/Project 3/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.SpatialTracking">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/Project-3/Project 3/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+ <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProBuilder.AddOns.Editor">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
+ <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/Project-3/Project 3/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/Project-3/Project 3/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.XR.LegacyInputHelpers">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/Project-3/Project 3/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+ <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/Project-3/Project 3/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.multiplayer-hlapi.Runtime">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/Project-3/Project 3/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
-=======
- <HintPath>C:/Users/dexte/OneDrive/Desktop/School/GDD2/Project-3/Project 3/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/School/GDD2/Project-3/Project 3/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.ProBuilder.AddOns.Editor">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/School/GDD2/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/School/GDD2/Project-3/Project 3/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/dexte/OneDrive/Desktop/School/GDD2/Project-3/Project 3/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
->>>>>>> parent of 3a05246d... continued furnishing basement/first floor
+ <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 public enum MonsterState
 {
     Patrolling,
@@ -31,15 +32,23 @@ public class ArriveAtPoint : MonoBehaviour
     public float maxAttackTimer = .9f;
     private float attackTimer;
     public AudioClip[] footsteps;
+    public AudioClip[] snarls;
+    public AudioClip hit;
     public float footstepWalkTimer = 1f;
     public float footstepRunTimer = .5f;
     private float footstepTimer;
+    public float maxSnarlTime = 15f;
+    public float minSnarlTime = 7f;
+    private float curSnarlMax;
+    private float snarlTimer;
     void Start()
     {
         player = GameObject.Find("Player");
         curState = MonsterState.Patrolling;
         stunTimer = 0f;
         attackTimer = 0f;
+        snarlTimer = 0f;
+        curSnarlMax = Random.Range(minSnarlTime, maxSnarlTime);
         GetComponent<Animator>().SetInteger("battle", 0);
         GetComponent<Animator>().SetInteger("moving", 0);
     }
@@ -104,14 +113,22 @@ public class ArriveAtPoint : MonoBehaviour
                     }
                     if (angle < attackAngle && playerDist < attackDist)
                     {
+                        transform.forward = new Vector3(playerDir.x, transform.forward.y, playerDir.z);
+                        agent.ResetPath();
+                        Debug.Log("Here");
                         GetComponent<Animator>().SetInteger("battle", 1);
-                        GetComponent<Animator>().SetInteger("moving", 6);
+                        GetComponent<Animator>().SetInteger("moving", 0);
                         curState = MonsterState.Attacking;
+                        AudioSource.PlayClipAtPoint(hit, transform.position);
                         agent.enabled = false;
                     }
                     break;
                 case MonsterState.Attacking:
                     attackTimer += Time.deltaTime;
+                    if(GetComponent<Animator>().GetInteger("moving") == 0)
+                    {
+                        GetComponent<Animator>().SetInteger("moving", 6);
+                    }
                     if (attackTimer > maxAttackTimer)
                     {
                         attackTimer = 0f;
@@ -119,6 +136,11 @@ public class ArriveAtPoint : MonoBehaviour
                         GetComponent<Animator>().SetInteger("battle", 0);
                         GetComponent<Animator>().SetInteger("moving", 0);
                         agent.enabled = true;
+                        if (Pause.paused)
+                        {
+                            Pause.HitPause();
+                        }
+                        SceneManager.LoadScene("Game Over Scene");
                     }
                     break;
                 case MonsterState.Stunned:
@@ -135,6 +157,16 @@ public class ArriveAtPoint : MonoBehaviour
                     break;
                 default:
                     break;
+            }
+            if(curState != MonsterState.Stunned)
+            {
+                snarlTimer += Time.deltaTime;
+                if(snarlTimer > curSnarlMax)
+                {
+                    curSnarlMax = Random.Range(minSnarlTime, maxSnarlTime);
+                    snarlTimer = 0f;
+                    AudioSource.PlayClipAtPoint(snarls[Random.Range(0, snarls.Length)], transform.position);
+                }
             }
         }
         //if (Input.GetKeyDown(KeyCode.Mouse1))
