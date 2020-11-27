@@ -63,8 +63,10 @@
      <Compile Include="Assets\Scripts\PlayerBehavior.cs" />
      <Compile Include="Assets\Scripts\TimedDisappearance.cs" />
      <Compile Include="Assets\True_Horror_Creatures\Horror_creature1_v1.2\scripts\THC1_ctrl.cs" />
+     <None Include="Assets\Bed &amp; Bath Furniture Pack\Documentation.txt" />
      <None Include="Assets\paladin\shaders\pbrDoublesided.shader" />
      <None Include="Assets\Knight\shaders\doublesidedshader.shader" />
+     <None Include="Assets\Soja Exiles\Bar &amp; Liquor Cabinets\Message For You Please Read Me.txt" />
      <None Include="Assets\True_Horror_Creatures\Horror_creature1_v1.2\THC1_readme.txt" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -604,49 +606,49 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.14f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>C:/Users/dexte/OneDrive/Desktop/GDD2/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProGrids">
- <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
+ <HintPath>C:/Users/dexte/OneDrive/Desktop/GDD2/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>C:/Users/dexte/OneDrive/Desktop/GDD2/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProBuilder">
- <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
+ <HintPath>C:/Users/dexte/OneDrive/Desktop/GDD2/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProBuilder.Editor">
- <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
+ <HintPath>C:/Users/dexte/OneDrive/Desktop/GDD2/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
- <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+ <HintPath>C:/Users/dexte/OneDrive/Desktop/GDD2/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProGrids.Editor">
- <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
+ <HintPath>C:/Users/dexte/OneDrive/Desktop/GDD2/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/dexte/OneDrive/Desktop/GDD2/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Users/dexte/OneDrive/Desktop/GDD2/Project3/Project-3/Project 3/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>C:/Users/dexte/OneDrive/Desktop/GDD2/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>C:/Users/dexte/OneDrive/Desktop/GDD2/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>C:/Users/dexte/OneDrive/Desktop/GDD2/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProBuilder.AddOns.Editor">
- <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
+ <HintPath>C:/Users/dexte/OneDrive/Desktop/GDD2/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/dexte/OneDrive/Desktop/GDD2/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/Users/dexte/OneDrive/Desktop/GDD2/Project3/Project-3/Project 3/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
