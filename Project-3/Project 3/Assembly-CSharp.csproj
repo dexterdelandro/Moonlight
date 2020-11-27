@@ -55,6 +55,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AssetStoreOriginals\_SNAPS_PrototypingAssets\About\Scripts\Readme.cs" />
+     <Compile Include="Assets\Customizable_Furnture\Source\Scripts\CleanUpAll.cs" />
+     <Compile Include="Assets\Customizable_Furnture\Source\Scripts\Clock\AnalogicClock.cs" />
+     <Compile Include="Assets\Customizable_Furnture\Source\Scripts\Clock\ClockTimer.cs" />
+     <Compile Include="Assets\Customizable_Furnture\Source\Scripts\Clock\DigitalClock.cs" />
+     <Compile Include="Assets\Customizable_Furnture\Source\Scripts\Clock\DigitalClockValue.cs" />
+     <Compile Include="Assets\Customizable_Furnture\Source\Scripts\DisplayFrame.cs" />
+     <Compile Include="Assets\Customizable_Furnture\Source\Scripts\DisplaySelectedObject.cs" />
+     <Compile Include="Assets\Customizable_Furnture\Source\Scripts\OptionsDisplay.cs" />
+     <Compile Include="Assets\Customizable_Furnture\Source\Scripts\OptionsDisplaySaveVar.cs" />
+     <Compile Include="Assets\Customizable_Furnture\Source\Scripts\PlayVideo.cs" />
+     <Compile Include="Assets\Customizable_Furnture\Source\Scripts\SimpleSwitchMaterial.cs" />
+     <Compile Include="Assets\Knight\scripts\rotator.cs" />
      <Compile Include="Assets\Scripts\ArriveAtPoint.cs" />
      <Compile Include="Assets\Scripts\Buttons.cs" />
      <Compile Include="Assets\Scripts\Candle.cs" />
@@ -64,6 +77,8 @@
      <Compile Include="Assets\Scripts\TimedDisappearance.cs" />
      <Compile Include="Assets\True_Horror_Creatures\Horror_creature1_v1.2\scripts\THC1_ctrl.cs" />
      <None Include="Assets\paladin\shaders\pbrDoublesided.shader" />
+     <None Include="Assets\info_morgueroom.txt" />
+     <None Include="Assets\Customizable_Furnture\Readme\Readme.txt" />
      <None Include="Assets\Knight\shaders\doublesidedshader.shader" />
      <None Include="Assets\True_Horror_Creatures\Horror_creature1_v1.2\THC1_readme.txt" />
  <Reference Include="UnityEngine">
