@@ -55,9 +55,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Apartment_Door\Scripts\DoorController.cs" />
-     <Compile Include="Assets\Apartment_Door\Scripts\KeyController.cs" />
-     <Compile Include="Assets\Apartment_Door\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\AssetStoreOriginals\_SNAPS_PrototypingAssets\About\Scripts\Readme.cs" />
      <Compile Include="Assets\Customizable_Furnture\Source\Scripts\CleanUpAll.cs" />
      <Compile Include="Assets\Customizable_Furnture\Source\Scripts\Clock\AnalogicClock.cs" />
@@ -70,6 +67,9 @@
      <Compile Include="Assets\Customizable_Furnture\Source\Scripts\OptionsDisplaySaveVar.cs" />
      <Compile Include="Assets\Customizable_Furnture\Source\Scripts\PlayVideo.cs" />
      <Compile Include="Assets\Customizable_Furnture\Source\Scripts\SimpleSwitchMaterial.cs" />
+     <Compile Include="Assets\Doors\Scripts\DoorController.cs" />
+     <Compile Include="Assets\Doors\Scripts\KeyController.cs" />
+     <Compile Include="Assets\Doors\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Knight\scripts\rotator.cs" />
      <Compile Include="Assets\Scripts\ArriveAtPoint.cs" />
      <Compile Include="Assets\Scripts\Buttons.cs" />
@@ -78,11 +78,23 @@
      <Compile Include="Assets\Scripts\PickUpCandle.cs" />
      <Compile Include="Assets\Scripts\PlayerBehavior.cs" />
      <Compile Include="Assets\Scripts\TimedDisappearance.cs" />
+     <Compile Include="Assets\Soja Exiles\Bar &amp; Liquor Cabinets\Scripts &amp; Animation\TableFlipL.cs" />
+     <Compile Include="Assets\Soja Exiles\Bar &amp; Liquor Cabinets\Scripts &amp; Animation\TableFlipR.cs" />
+     <Compile Include="Assets\Soja Exiles\SE Basic Assets\Scripts and Animations\Doors\opencloseDoor.cs" />
+     <Compile Include="Assets\Soja Exiles\SE Basic Assets\Scripts and Animations\Doors\opencloseDoor1.cs" />
+     <Compile Include="Assets\Soja Exiles\SE Basic Assets\Scripts and Animations\Drawer\X Axis\Drawer_Pull_X.cs" />
+     <Compile Include="Assets\Soja Exiles\SE Basic Assets\Scripts and Animations\Drawer\Z Axis\Drawer_Pull_Z.cs" />
+     <Compile Include="Assets\Soja Exiles\SE Basic Assets\Scripts and Animations\First Person Player\MouseLook.cs" />
+     <Compile Include="Assets\Soja Exiles\SE Basic Assets\Scripts and Animations\First Person Player\PlayerMovement.cs" />
+     <Compile Include="Assets\Soja Exiles\SE Basic Assets\Scripts and Animations\Windows\opencloseWindow.cs" />
+     <Compile Include="Assets\Soja Exiles\SE Basic Assets\Scripts and Animations\Windows\opencloseWindow1.cs" />
      <Compile Include="Assets\True_Horror_Creatures\Horror_creature1_v1.2\scripts\THC1_ctrl.cs" />
+     <None Include="Assets\Bed &amp; Bath Furniture Pack\Documentation.txt" />
      <None Include="Assets\paladin\shaders\pbrDoublesided.shader" />
      <None Include="Assets\info_morgueroom.txt" />
      <None Include="Assets\Customizable_Furnture\Readme\Readme.txt" />
      <None Include="Assets\Knight\shaders\doublesidedshader.shader" />
+     <None Include="Assets\Soja Exiles\Bar &amp; Liquor Cabinets\Message For You Please Read Me.txt" />
      <None Include="Assets\True_Horror_Creatures\Horror_creature1_v1.2\THC1_readme.txt" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
