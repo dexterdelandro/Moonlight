@@ -268,16 +268,7 @@
  </Reference>
  <Reference Include="nunit.framework">
  <HintPath>C:/Users/dexte/OneDrive/Desktop/GDD2/Project3/Project-3/Project 3/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
- <Reference Include="UnityEditor.OSXStandalone.Extensions">
- <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.14f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.LinuxStandalone.Extensions">
- <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.14f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.UWP.Extensions">
- <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.14f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll</HintPath>
- </Reference>
-</Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.14f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
  </Reference>
@@ -692,6 +683,10 @@
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{4CF8333C-0521-55EC-BF4C-A94E6153105F}</Project>
       <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
+      <Project>{45F26EF8-41BA-7E27-106E-4B76C82182EE}</Project>
+      <Name>Assembly-CSharp-Editor-firstpass</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

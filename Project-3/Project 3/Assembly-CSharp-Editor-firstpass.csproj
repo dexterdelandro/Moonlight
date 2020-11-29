@@ -250,15 +250,6 @@
  </Reference>
  <Reference Include="nunit.framework">
  <HintPath>C:/Users/dexte/OneDrive/Desktop/GDD2/Project3/Project-3/Project 3/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
- <Reference Include="UnityEditor.OSXStandalone.Extensions">
- <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.14f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.LinuxStandalone.Extensions">
- <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.14f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.UWP.Extensions">
- <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.14f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll</HintPath>
- </Reference>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.14f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
