@@ -85,7 +85,6 @@
      <Compile Include="Assets\Soja Exiles\SE Basic Assets\Scripts and Animations\Drawer\X Axis\Drawer_Pull_X.cs" />
      <Compile Include="Assets\Soja Exiles\SE Basic Assets\Scripts and Animations\Drawer\Z Axis\Drawer_Pull_Z.cs" />
      <Compile Include="Assets\Soja Exiles\SE Basic Assets\Scripts and Animations\First Person Player\MouseLook.cs" />
-     <Compile Include="Assets\Soja Exiles\SE Basic Assets\Scripts and Animations\First Person Player\PlayerMovement.cs" />
      <Compile Include="Assets\Soja Exiles\SE Basic Assets\Scripts and Animations\Windows\opencloseWindow.cs" />
      <Compile Include="Assets\Soja Exiles\SE Basic Assets\Scripts and Animations\Windows\opencloseWindow1.cs" />
      <Compile Include="Assets\True_Horror_Creatures\Horror_creature1_v1.2\scripts\THC1_ctrl.cs" />
