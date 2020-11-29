@@ -131,7 +131,9 @@
      <Compile Include="Assets\Standard Assets\Utility\DynamicShadowSettings.cs" />
      <Compile Include="Assets\Standard Assets\Utility\EventSystemChecker.cs" />
      <Compile Include="Assets\Standard Assets\Utility\FOVKick.cs" />
+     <Compile Include="Assets\Standard Assets\Utility\FPSCounter.cs" />
      <Compile Include="Assets\Standard Assets\Utility\FollowTarget.cs" />
+     <Compile Include="Assets\Standard Assets\Utility\ForcedReset.cs" />
      <Compile Include="Assets\Standard Assets\Utility\LerpControlledBob.cs" />
      <Compile Include="Assets\Standard Assets\Utility\ObjectResetter.cs" />
      <Compile Include="Assets\Standard Assets\Utility\ParticleSystemDestroyer.cs" />
@@ -139,6 +141,10 @@
      <Compile Include="Assets\Standard Assets\Utility\SimpleActivatorMenu.cs" />
      <Compile Include="Assets\Standard Assets\Utility\SimpleMouseRotator.cs" />
      <Compile Include="Assets\Standard Assets\Utility\SmoothFollow.cs" />
+     <Compile Include="Assets\Standard Assets\Utility\TimedObjectActivator.cs" />
+     <Compile Include="Assets\Standard Assets\Utility\TimedObjectDestructor.cs" />
+     <Compile Include="Assets\Standard Assets\Utility\WaypointCircuit.cs" />
+     <Compile Include="Assets\Standard Assets\Utility\WaypointProgressTracker.cs" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Tonemapper.shader" />
      <None Include="Assets\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
@@ -760,49 +766,49 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.14f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>C:/Users/dexte/OneDrive/Desktop/GDD2/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProGrids">
- <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
+ <HintPath>C:/Users/dexte/OneDrive/Desktop/GDD2/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>C:/Users/dexte/OneDrive/Desktop/GDD2/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProBuilder">
- <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
+ <HintPath>C:/Users/dexte/OneDrive/Desktop/GDD2/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProBuilder.Editor">
- <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
+ <HintPath>C:/Users/dexte/OneDrive/Desktop/GDD2/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
- <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+ <HintPath>C:/Users/dexte/OneDrive/Desktop/GDD2/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProGrids.Editor">
- <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
+ <HintPath>C:/Users/dexte/OneDrive/Desktop/GDD2/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/dexte/OneDrive/Desktop/GDD2/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Users/dexte/OneDrive/Desktop/GDD2/Project3/Project-3/Project 3/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>C:/Users/dexte/OneDrive/Desktop/GDD2/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>C:/Users/dexte/OneDrive/Desktop/GDD2/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>C:/Users/dexte/OneDrive/Desktop/GDD2/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProBuilder.AddOns.Editor">
- <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
+ <HintPath>C:/Users/dexte/OneDrive/Desktop/GDD2/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/dexte/OneDrive/Desktop/GDD2/Project3/Project-3/Project 3/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/Blah Chicken/Documents/Git/Project3/Project 3 New/Project3/Project-3/Project 3/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/Users/dexte/OneDrive/Desktop/GDD2/Project3/Project-3/Project 3/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
