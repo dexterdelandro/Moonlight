@@ -57,9 +57,6 @@
   <ItemGroup>
      <Compile Include="Assets\AssetStoreOriginals\_SNAPS_PrototypingAssets\About\Scripts\Editor\ReadmeEditor.cs" />
      <Compile Include="Assets\AssetStoreOriginals\_SNAPS_PrototypingAssets\Scripts\Editor\PackageChecker\PackageChecker.cs" />
-     <Compile Include="Assets\Customizable_Furnture\Editor\Customizable_Furniture\EditorCleanUpAll.cs" />
-     <Compile Include="Assets\Customizable_Furnture\Editor\Customizable_Furniture\EditorOptionsDisplay.cs" />
-     <Compile Include="Assets\Customizable_Furnture\Editor\Customizable_Furniture\EditorSimpleSwitchMaterial.cs" />
      <Compile Include="Assets\Editor\ImageEffects\AntialiasingEditor.cs" />
      <Compile Include="Assets\Editor\ImageEffects\BloomAndFlaresEditor.cs" />
      <Compile Include="Assets\Editor\ImageEffects\BloomEditor.cs" />
@@ -683,10 +680,6 @@
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{4CF8333C-0521-55EC-BF4C-A94E6153105F}</Project>
       <Name>Assembly-CSharp</Name>
-    </ProjectReference>
-    <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
-      <Project>{45F26EF8-41BA-7E27-106E-4B76C82182EE}</Project>
-      <Name>Assembly-CSharp-Editor-firstpass</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
