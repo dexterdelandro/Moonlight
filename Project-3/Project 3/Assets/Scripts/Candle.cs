@@ -37,7 +37,7 @@ public class Candle : MonoBehaviour
         {
             if (held)
             {
-                transform.position = cam.transform.position + cam.transform.forward / 2.6f;
+                transform.position = cam.transform.position + cam.transform.forward * 8f;
                 if (Input.GetKeyDown(KeyCode.E) && !justPickedUp)
                 {
                     RaycastHit hit;
