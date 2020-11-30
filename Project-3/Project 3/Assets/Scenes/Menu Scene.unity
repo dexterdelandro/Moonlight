@@ -359,7 +359,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7902022213357588339, guid: 30c7a3eb71b1b10448250207fc49c243,
+      - m_Target: {fileID: 5743856740521367810, guid: 7c771d83828a39f4ebb0fd27b956e023,
           type: 3}
         m_MethodName: ExitButton
         m_Mode: 1
@@ -639,7 +639,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7902022213357588339, guid: 30c7a3eb71b1b10448250207fc49c243,
+      - m_Target: {fileID: 5743856740521367810, guid: 7c771d83828a39f4ebb0fd27b956e023,
           type: 3}
         m_MethodName: StartButton
         m_Mode: 1
