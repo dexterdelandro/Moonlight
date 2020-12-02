@@ -41,6 +41,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
+        //
+        private Inventory inventory;
+        [SerializeField] private UI_InventoryS uiInventory;
+        private bool showing;
+        private Canvas canvas;
 
         // Use this for initialization
         private void Start()
@@ -55,12 +60,45 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+            //
+            inventory = GetComponent<Inventory>();
+            uiInventory.SetInventory(inventory);
+            showing = false;
+            canvas = GameObject.Find("Canvas").GetComponent<Canvas>() as Canvas;
         }
 
 
         // Update is called once per frame
         private void Update()
         {
+            if (Input.GetKey(KeyCode.Alpha1))
+            {
+                inventory.RemoveItem(Item.ItemType.Potion1);
+                //increase speed
+
+            }
+            if (Input.GetKey(KeyCode.Alpha2))
+            {
+                inventory.RemoveItem(Item.ItemType.Potion2);
+                //sound enhance
+
+            }
+            if (Input.GetKey(KeyCode.Alpha3))
+            {
+                inventory.RemoveItem(Item.ItemType.Potion3);
+                //emit light
+
+            }
+            if (Input.GetKey(KeyCode.N))
+            {
+                inventory.RemoveItem(Item.ItemType.Note);
+            }
+            if (Input.GetKeyDown(KeyCode.I))
+            {
+                showing = !showing;
+                canvas.enabled = showing;
+            }
+
             RotateView();
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
