@@ -17,6 +17,11 @@ public class Candle : MonoBehaviour
     private GameObject monster;
     public float stunDist = 1f;
     public float playerMaxUnstunNoticeDist = 3f; //Mouthful i know
+    private Transform light;
+    private Transform top;
+    private Transform holder;
+    public float heightAboveFloor = 5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +33,9 @@ public class Candle : MonoBehaviour
         startYLength = transform.localScale.y;
         lastHeight = transform.localScale.y;
         monster = GameObject.Find("Monster");
+        light = transform.parent.GetChild(1);
+        top = transform.parent.GetChild(2);
+        holder = transform.parent.GetChild(3);
     }
 
     // Update is called once per frame
@@ -37,13 +45,13 @@ public class Candle : MonoBehaviour
         {
             if (held)
             {
-                transform.position = cam.transform.position + cam.transform.forward * 8f;
+                transform.parent.position = cam.transform.position + cam.transform.forward * 8f;
                 if (Input.GetKeyDown(KeyCode.E) && !justPickedUp)
                 {
                     RaycastHit hit;
-                    if (Physics.Raycast(transform.position, Vector3.down, out hit))
+                    if (Physics.Raycast(transform.parent.position, Vector3.down, out hit))
                     {
-                        transform.position = new Vector3(hit.point.x, hit.point.y + transform.localScale.y, hit.point.z);
+                        transform.parent.position = new Vector3(hit.point.x, hit.point.y + heightAboveFloor, hit.point.z);
                     }
                     held = false;
                     player.GetComponent<PickUpCandle>().holding = false;
@@ -56,11 +64,11 @@ public class Candle : MonoBehaviour
                         lit = !lit;
                         if (lit)
                         {
-                            transform.GetChild(0).gameObject.SetActive(true);
+                            light.gameObject.SetActive(true);
                         }
                         else
                         {
-                            transform.GetChild(0).gameObject.SetActive(false);
+                            light.gameObject.SetActive(false);
                         }
                     }
                 }
@@ -96,7 +104,9 @@ public class Candle : MonoBehaviour
                     }
                     float height = startYLength * (curTime / maxTime);
                     transform.localScale = new Vector3(transform.localScale.x, height, transform.localScale.z);
-                    transform.position = new Vector3(transform.position.x, transform.position.y - (lastHeight - height) / 2, transform.position.z);
+                    transform.position = new Vector3(transform.position.x, holder.position.y + holder.GetComponent<BoxCollider>().size.y + GetComponent<CapsuleCollider>().height / 2, transform.position.z);
+                    light.position = new Vector3(transform.position.x, transform.position.y + GetComponent<CapsuleCollider>().height / 2 + top.GetComponent<BoxCollider>().bounds.size.y, transform.position.z);
+                    top.position = new Vector3(transform.position.x, transform.position.y + (GetComponent<CapsuleCollider>().height + top.GetComponent<BoxCollider>().bounds.size.y) / 2, transform.position.z);
                     lastHeight = height;
                 }
             }
