@@ -14,6 +14,8 @@ public class DoorController : MonoBehaviour
     private Animation doorAnim;
     private BoxCollider doorCollider;           //To enable the player to go through the door if door is opened else block him
 
+    public bool exitDoor;
+
     enum DoorState
     {
         Closed,
@@ -58,68 +60,79 @@ public class DoorController : MonoBehaviour
         txtToDisplay.SetActive(false);
     }
 
+    public void openExitDoor() {
+        doorAnim.Play("Door_Open");
+        doorState = DoorState.Opened;
+    }
+
     private void Update()
     {
-        //To Check if the player is in the zone
-        if (playerInZone)
+        if (exitDoor)
         {
-            if (doorState == DoorState.Opened)
-            {
-                txtToDisplay.GetComponent<Text>().text = "Press 'E' to Close";
-                doorCollider.enabled = false;
-            }
-            else if (doorState == DoorState.Closed || gotKey)
-            {
-                txtToDisplay.GetComponent<Text>().text = "Press 'E' to Open";
-                doorCollider.enabled = true;
-            }
-            else if (doorState == DoorState.Jammed)
-            {
-                txtToDisplay.GetComponent<Text>().text = "Needs Key";
-                doorCollider.enabled = true;
-            }
+
         }
-
-        if (Input.GetKeyDown(KeyCode.E) && playerInZone)
-        {
-            doorOpened = !doorOpened;           //The toggle function of door to open/close
-
-            if (doorState == DoorState.Closed && !doorAnim.isPlaying)
+        else {
+            //To Check if the player is in the zone
+            if (playerInZone)
             {
-                if (!keyNeeded)
+                if (doorState == DoorState.Opened)
+                {
+                    txtToDisplay.GetComponent<Text>().text = "Press 'E' to Close";
+                    doorCollider.enabled = false;
+                }
+                else if (doorState == DoorState.Closed || gotKey)
+                {
+                    txtToDisplay.GetComponent<Text>().text = "Press 'E' to Open";
+                    doorCollider.enabled = true;
+                }
+                else if (doorState == DoorState.Jammed)
+                {
+                    txtToDisplay.GetComponent<Text>().text = "Needs Key";
+                    doorCollider.enabled = true;
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.E) && playerInZone)
+            {
+                doorOpened = !doorOpened;           //The toggle function of door to open/close
+
+                if (doorState == DoorState.Closed && !doorAnim.isPlaying)
+                {
+                    if (!keyNeeded)
+                    {
+                        doorAnim.Play("Door_Open");
+                        doorState = DoorState.Opened;
+                    }
+                    else if (keyNeeded && !gotKey)
+                    {
+                        doorAnim.Play("Door_Jam");
+                        doorState = DoorState.Jammed;
+                    }
+                }
+
+                if (doorState == DoorState.Closed && gotKey && !doorAnim.isPlaying)
                 {
                     doorAnim.Play("Door_Open");
                     doorState = DoorState.Opened;
                 }
-                else if (keyNeeded && !gotKey)
+
+                if (doorState == DoorState.Opened && !doorAnim.isPlaying)
+                {
+                    doorAnim.Play("Door_Close");
+                    doorState = DoorState.Closed;
+                }
+
+                if (doorState == DoorState.Jammed && !gotKey)
                 {
                     doorAnim.Play("Door_Jam");
                     doorState = DoorState.Jammed;
                 }
+                else if (doorState == DoorState.Jammed && gotKey && !doorAnim.isPlaying)
+                {
+                    doorAnim.Play("Door_Open");
+                    doorState = DoorState.Opened;
+                }
             }
-
-            if (doorState == DoorState.Closed && gotKey && !doorAnim.isPlaying)
-            {
-                doorAnim.Play("Door_Open");
-                doorState = DoorState.Opened;
-            }
-
-            if (doorState == DoorState.Opened && !doorAnim.isPlaying)
-            {
-                doorAnim.Play("Door_Close");
-                doorState = DoorState.Closed;
-            }
-
-            if (doorState == DoorState.Jammed && !gotKey)
-            {
-                doorAnim.Play("Door_Jam");
-                doorState = DoorState.Jammed;
-            }
-            else if (doorState == DoorState.Jammed && gotKey && !doorAnim.isPlaying)
-            {
-                doorAnim.Play("Door_Open");
-                doorState = DoorState.Opened;
-            }
-        }
+        }       
     }
 }
