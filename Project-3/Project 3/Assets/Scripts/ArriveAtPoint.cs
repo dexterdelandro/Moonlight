@@ -41,6 +41,7 @@ public class ArriveAtPoint : MonoBehaviour
     public float minSnarlTime = 7f;
     private float curSnarlMax;
     private float snarlTimer;
+    private Vector3 targetPos;
     void Start()
     {
         player = GameObject.Find("Player");
@@ -51,6 +52,7 @@ public class ArriveAtPoint : MonoBehaviour
         curSnarlMax = Random.Range(minSnarlTime, maxSnarlTime);
         GetComponent<Animator>().SetInteger("battle", 0);
         GetComponent<Animator>().SetInteger("moving", 0);
+        ChooseNewPosition();
     }
 
     public void NewPosition(Vector3 position)
@@ -62,8 +64,25 @@ public class ArriveAtPoint : MonoBehaviour
             timeSinceNoticed = 0f;
             GetComponent<Animator>().SetInteger("battle", 1);
             GetComponent<Animator>().SetInteger("moving", 2);
+            agent.speed = 50f;
         }
     }
+
+    public void ChooseNewPosition()
+    {
+        Vector3 randomLoc = Random.insideUnitSphere;
+        randomLoc.x *= 243.5f;
+        randomLoc.y *= 49.6f;
+        randomLoc.z *= 231.0f;
+        randomLoc += new Vector3(-3453.6f, 231.0f, 1638.8f);
+        NavMeshHit hit;
+        NavMesh.SamplePosition(randomLoc, out hit, 500.0f, 1);
+        agent.SetDestination(hit.position);
+        Debug.Log(hit.position);
+        targetPos = hit.position;
+        agent.speed = 25f;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -81,11 +100,19 @@ public class ArriveAtPoint : MonoBehaviour
                         AudioSource.PlayClipAtPoint(footsteps[Random.Range(0, footsteps.Length)], transform.position);
                     }
                     footstepTimer += Time.deltaTime;
+                    if(Vector2.Distance(new Vector2(transform.position.x, transform.position.z), new Vector2(targetPos.x, targetPos.z)) < 5f)
+                    {
+                        ChooseNewPosition();
+                    }
                     if (playerDist < playerHiddenDistance && angle < maximumSightAngle)
                     {
-                        if (Physics.Raycast(head.position, player.transform.position - head.position, playerLayer))
+                        if (!Physics.Raycast(head.position, Vector3.Normalize(player.transform.position - head.position), playerDist, playerLayer))
                         {
-                            NewPosition(player.transform.position);
+                            RaycastHit hit;
+                            if (Physics.Raycast(player.transform.position, Vector3.down, out hit))
+                            {
+                                NewPosition(new Vector3(hit.point.x, hit.point.y, hit.point.z));
+                            }
                         }
                     }
                     break;
@@ -98,9 +125,13 @@ public class ArriveAtPoint : MonoBehaviour
                     footstepTimer += Time.deltaTime;
                     if (playerDist < playerHiddenDistance && angle < maximumSightAngle || playerDist < chaseAwarenessDist)
                     {
-                        if (Physics.Raycast(head.position, player.transform.position - head.position, playerLayer))
+                        if (!Physics.Raycast(head.position, Vector3.Normalize(player.transform.position - head.position), playerDist, playerLayer))
                         {
-                            NewPosition(player.transform.position);
+                            RaycastHit hit;
+                            if (Physics.Raycast(player.transform.position, Vector3.down, out hit))
+                            {
+                                NewPosition(new Vector3(hit.point.x, hit.point.y, hit.point.z));
+                            }
                         }
                     }
                     agent.SetDestination(lastKnownPosition);
@@ -133,8 +164,7 @@ public class ArriveAtPoint : MonoBehaviour
                     {
                         attackTimer = 0f;
                         curState = MonsterState.Patrolling;
-                        GetComponent<Animator>().SetInteger("battle", 0);
-                        GetComponent<Animator>().SetInteger("moving", 0);
+                        ChooseNewPosition();
                         agent.enabled = true;
                         if (Pause.paused)
                         {
@@ -144,16 +174,6 @@ public class ArriveAtPoint : MonoBehaviour
                     }
                     break;
                 case MonsterState.Stunned:
-                    stunTimer += Time.deltaTime;
-                    if (stunTimer > maxStunTimer)
-                    {
-                        stunTimer = 0f;
-                        curState = MonsterState.Chasing;
-                        NewPosition(player.transform.position);
-                        GetComponent<Animator>().SetInteger("battle", 0);
-                        GetComponent<Animator>().SetInteger("moving", 0);
-                        agent.enabled = true;
-                    }
                     break;
                 default:
                     break;
