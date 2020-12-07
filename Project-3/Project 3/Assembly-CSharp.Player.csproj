@@ -628,7 +628,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AssetStoreOriginals\_SNAPS_PrototypingAssets\About\Scripts\Readme.cs" />
+    <Compile Include="Assets\Bed &amp; Bath Furniture Pack\Materials\Textures\About\Scripts\Readme.cs" />
     <Compile Include="Assets\Doors\Scripts\DoorController.cs" />
     <Compile Include="Assets\Doors\Scripts\KeyController.cs" />
     <Compile Include="Assets\Doors\Scripts\PlayerMovement.cs" />
@@ -637,11 +637,13 @@
     <Compile Include="Assets\Scripts\Buttons.cs" />
     <Compile Include="Assets\Scripts\Candle.cs" />
     <Compile Include="Assets\Scripts\Keypad.cs" />
+    <Compile Include="Assets\Scripts\Note.cs" />
     <Compile Include="Assets\Scripts\Pause.cs" />
     <Compile Include="Assets\Scripts\PickUpCandle.cs" />
     <Compile Include="Assets\Scripts\PlayerBehavior.cs" />
     <Compile Include="Assets\Scripts\TimedDisappearance.cs" />
     <Compile Include="Assets\True_Horror_Creatures\Horror_creature1_v1.2\scripts\THC1_ctrl.cs" />
+    <Compile Include="Assets\WinSensor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Bed &amp; Bath Furniture Pack\Documentation.txt" />
