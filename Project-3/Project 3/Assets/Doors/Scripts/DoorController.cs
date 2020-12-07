@@ -63,6 +63,7 @@ public class DoorController : MonoBehaviour
     public void openExitDoor() {
         doorAnim.Play("Door_Open");
         doorState = DoorState.Opened;
+        doorCollider.enabled = false;
     }
 
     private void Update()
