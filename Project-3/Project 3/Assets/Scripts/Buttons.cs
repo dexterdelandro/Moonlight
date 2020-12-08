@@ -21,6 +21,8 @@ public class Buttons : MonoBehaviour
         {
             Pause.HitPause();
         }
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("Menu Scene");
     }
 

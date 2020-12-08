@@ -8,6 +8,8 @@ public class WinSensor : MonoBehaviour
 {
 	private void OnTriggerEnter(Collider other)
 	{
-		SceneManager.LoadScene(4);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        SceneManager.LoadScene(3);
 	}
 }

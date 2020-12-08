@@ -65,8 +65,10 @@
      <Compile Include="Assets\Scripts\Candle.cs" />
      <Compile Include="Assets\Scripts\Keypad.cs" />
      <Compile Include="Assets\Scripts\Note.cs" />
+     <Compile Include="Assets\Scripts\NotePickup.cs" />
      <Compile Include="Assets\Scripts\Pause.cs" />
      <Compile Include="Assets\Scripts\PickUpCandle.cs" />
+     <Compile Include="Assets\Scripts\PickUpNote.cs" />
      <Compile Include="Assets\Scripts\PlayerBehavior.cs" />
      <Compile Include="Assets\Scripts\TimedDisappearance.cs" />
      <Compile Include="Assets\True_Horror_Creatures\Horror_creature1_v1.2\scripts\THC1_ctrl.cs" />

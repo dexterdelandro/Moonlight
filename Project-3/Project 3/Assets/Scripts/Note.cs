@@ -11,12 +11,14 @@ public class Note : MonoBehaviour
     private static Canvas canvas;
 
     private bool isDisplayed = false;
-    private int currentNote;
+    public int currentNote;
     public bool[] noteFound;
+    public bool atLeastOne;
 
     // Start is called before the first frame update
     void Start()
     {
+        atLeastOne = false;
         currentNote = 0;
         listOfNotes = new List<Image>();
         canvas = GameObject.Find("NoteCanvas").GetComponent<Canvas>();
@@ -24,7 +26,7 @@ public class Note : MonoBehaviour
         for(int c = 0; c < 5; c++)
         {
             listOfNotes.Add(canvas.transform.GetChild(c).GetComponent<Image>());
-            noteFound[c] = true;
+            noteFound[c] = false;
         }
 
     }
@@ -33,12 +35,12 @@ public class Note : MonoBehaviour
     void Update()
     {
 
-        if (listOfNotes.Count > 0)
+        if (atLeastOne)
         {
             if (Input.GetKeyDown(KeyCode.N))
             {
-                isDisplayed = !isDisplayed;
-                canvas.enabled = !canvas.enabled;
+                Pause.HitPause(true);
+                isDisplayed = Pause.paused;
             }
 
             if (isDisplayed)
@@ -97,10 +99,6 @@ public class Note : MonoBehaviour
                 canvas.enabled = false;
                 listOfNotes[currentNote].enabled = false;
             }
-        }
-        else 
-        {
-
         }
 
     }

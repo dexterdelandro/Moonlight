@@ -23,7 +23,6 @@ public class PlayerBehavior : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(transform.position, Vector3.down, out hit, 50f, floor))
             {
-                Debug.Log(hit.point);
                 monster.GetComponent<ArriveAtPoint>().NewPosition(new Vector3(hit.point.x, hit.point.y, hit.point.z));
             }
         }
