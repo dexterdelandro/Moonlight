@@ -1,37 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Note : MonoBehaviour
 {
-    public GameObject g1;
-    public GameObject g2;
 
-    public List<GameObject> listOfNotes = new List<GameObject>();
+    public List<Image> listOfNotes;
 
     private static Canvas canvas;
 
     private bool isDisplayed = false;
-    private int currentNote = 0;
+    private int currentNote;
+    public bool[] noteFound;
 
     // Start is called before the first frame update
     void Start()
     {
-        g1 = Instantiate(g1);
-        g2 = Instantiate(g2);
-
+        currentNote = 0;
+        listOfNotes = new List<Image>();
         canvas = GameObject.Find("NoteCanvas").GetComponent<Canvas>();
-
-        g1.transform.parent = GameObject.Find("NoteCanvas").transform;
-        g2.transform.parent = GameObject.Find("NoteCanvas").transform;
-
-        listOfNotes.Add(g1);
-        listOfNotes.Add(g2);
-
-        foreach (GameObject g in listOfNotes)
+        noteFound = new bool[5];
+        for(int c = 0; c < 5; c++)
         {
-            g.SetActive(false);
+            listOfNotes.Add(canvas.transform.GetChild(c).GetComponent<Image>());
+            noteFound[c] = true;
         }
+
     }
 
     // Update is called once per frame
@@ -48,44 +43,59 @@ public class Note : MonoBehaviour
 
             if (isDisplayed)
             {
-                listOfNotes[currentNote].SetActive(true);
+                listOfNotes[currentNote].enabled = true;
                 listOfNotes[currentNote].transform.parent.position = Vector3.zero;
-                listOfNotes[currentNote].transform.localScale = new Vector3(50, 50, 50);
+                listOfNotes[currentNote].transform.localScale = new Vector3(5, 7, 5);
 
                 if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
                 {
-                    listOfNotes[currentNote].SetActive(false);
+                    listOfNotes[currentNote].enabled = false;
                     currentNote--;
-
                     if (currentNote < 0)
                     {
                         currentNote = listOfNotes.Count - 1;
                     }
+                    while (noteFound[currentNote] == false)
+                    {
+                        currentNote--;
+                        if (currentNote < 0)
+                        {
+                            currentNote = listOfNotes.Count - 1;
+                        }
+                    }
 
-                    listOfNotes[currentNote].SetActive(true);
+                    listOfNotes[currentNote].enabled = true;
                     listOfNotes[currentNote].transform.parent.position = Vector3.zero;
-                    listOfNotes[currentNote].transform.localScale = new Vector3(50, 50, 50);
+                    listOfNotes[currentNote].transform.localScale = new Vector3(5, 7, 5);
                 }
 
                 if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
                 {
-                    listOfNotes[currentNote].SetActive(false);
-                    currentNote++;
+                    listOfNotes[currentNote].enabled = false;
 
+                    currentNote++;
                     if (currentNote > listOfNotes.Count - 1)
                     {
                         currentNote = 0;
                     }
+                    while (noteFound[currentNote] == false)
+                    {
+                        currentNote++;
+                        if (currentNote > listOfNotes.Count - 1)
+                        {
+                            currentNote = 0;
+                        }
+                    }
 
-                    listOfNotes[currentNote].SetActive(true);
+                    listOfNotes[currentNote].enabled = true;
                     listOfNotes[currentNote].transform.parent.position = Vector3.zero;
-                    listOfNotes[currentNote].transform.localScale = new Vector3(30, 30, 30);
+                    listOfNotes[currentNote].transform.localScale = new Vector3(5, 7, 5);
                 }
             }
             else if (!isDisplayed)
             {
                 canvas.enabled = false;
-                listOfNotes[currentNote].SetActive(false);
+                listOfNotes[currentNote].enabled = false;
             }
         }
         else 

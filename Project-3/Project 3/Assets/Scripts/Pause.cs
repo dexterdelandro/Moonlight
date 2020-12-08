@@ -27,11 +27,15 @@ public class Pause : MonoBehaviour
         paused = !paused;
         if (paused)
         {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             Time.timeScale = 0;
             canvas.enabled = true;
         }
         else
         {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
             Time.timeScale = 1;
             canvas.enabled = false;
         }

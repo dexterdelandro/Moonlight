@@ -9,18 +9,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu Scene.unity
     guid: 4f687193044bdaf4fa5d744c7f63b67d
   - enabled: 1
-    path: Assets/Scenes/House.unity
-    guid: 5ce96523ac779cc4397657498ad7826e
+    path: Assets/Scenes/Julien's Sceme House.unity
+    guid: 421f6adb61bebda4fbb4ab20efac2dd9
   - enabled: 1
     path: Assets/Scenes/Game Over Scene.unity
     guid: 8dfa1200053d90e4d8233c7a3d4fc914
-  - enabled: 0
-    path: Assets/Scenes/Julien's Scene.unity
-    guid: 8be0b6da6b799bf4c8dc3dc1e8aa0c29
-  - enabled: 1
-    path: Assets/Scenes/Dexter New Scene.unity
-    guid: d74ccc36c8c8c7840b0b8f38064d1cf3
   - enabled: 1
     path: Assets/Scenes/Win Scene.unity
     guid: 4fb721eff49447c4ca6487c427e2ec64
+  - enabled: 0
+    path: Assets/Scenes/House.unity
+    guid: 5ce96523ac779cc4397657498ad7826e
+  - enabled: 0
+    path: Assets/Scenes/Julien's Scene.unity
+    guid: 8be0b6da6b799bf4c8dc3dc1e8aa0c29
+  - enabled: 0
+    path: Assets/Scenes/Dexter New Scene.unity
+    guid: d74ccc36c8c8c7840b0b8f38064d1cf3
   m_configObjects: {}

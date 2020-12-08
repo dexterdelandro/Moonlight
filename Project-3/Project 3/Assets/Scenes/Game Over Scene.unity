@@ -359,7 +359,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Restart
+  m_Text: Exit
 --- !u!222 &398655049
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -437,7 +437,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Restart
+  m_Text: Main Menu
 --- !u!222 &1089411265
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -813,7 +813,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5743856740521367810, guid: 7c771d83828a39f4ebb0fd27b956e023,
           type: 3}
-        m_MethodName: StartButton
+        m_MethodName: MenuButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1105,7 +1105,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5743856740521367810, guid: 7c771d83828a39f4ebb0fd27b956e023,
           type: 3}
-        m_MethodName: StartButton
+        m_MethodName: ExitButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
