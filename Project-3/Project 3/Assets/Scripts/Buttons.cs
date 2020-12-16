@@ -7,7 +7,7 @@ public class Buttons : MonoBehaviour
 {
     public void StartButton()
     {
-        SceneManager.LoadScene("House");
+        SceneManager.LoadScene("Julien's Sceme House");
     }
 
     public void ExitButton()

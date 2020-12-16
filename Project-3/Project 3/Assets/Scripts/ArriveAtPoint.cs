@@ -42,6 +42,7 @@ public class ArriveAtPoint : MonoBehaviour
     private float curSnarlMax;
     private float snarlTimer;
     private Vector3 targetPos;
+    public LayerMask floor;
     void Start()
     {
         player = GameObject.Find("Player");
@@ -75,11 +76,11 @@ public class ArriveAtPoint : MonoBehaviour
         randomLoc.y *= 49.6f;
         randomLoc.z *= 231.0f;
         randomLoc += new Vector3(-3453.6f, 231.0f, 1638.8f);
-        NavMeshHit hit;
-        NavMesh.SamplePosition(randomLoc, out hit, 500.0f, 1);
-        agent.SetDestination(hit.position);
-        Debug.Log(hit.position);
-        targetPos = hit.position;
+        NavMeshHit hitt;
+        NavMesh.SamplePosition(randomLoc, out hitt, 500.0f, 1);
+        agent.SetDestination(hitt.position);
+        targetPos = hitt.position;
+        Debug.Log(hitt.position);
         agent.speed = 25f;
     }
 
@@ -91,6 +92,7 @@ public class ArriveAtPoint : MonoBehaviour
             Vector3 playerDir = player.transform.position - transform.position;
             float angle = Vector2.Angle(new Vector2(playerDir.x, playerDir.z), new Vector2(transform.forward.x, transform.forward.z));
             float playerDist = Vector3.Distance(player.transform.position, transform.position);
+            RaycastHit hitt;
             switch (curState)
             {
                 case MonsterState.Patrolling:
@@ -100,7 +102,7 @@ public class ArriveAtPoint : MonoBehaviour
                         AudioSource.PlayClipAtPoint(footsteps[Random.Range(0, footsteps.Length)], transform.position);
                     }
                     footstepTimer += Time.deltaTime;
-                    if(Vector2.Distance(new Vector2(transform.position.x, transform.position.z), new Vector2(targetPos.x, targetPos.z)) < 5f)
+                    if(Vector2.Distance(new Vector2(transform.position.x, transform.position.z), new Vector2(targetPos.x, targetPos.z)) < 20f)
                     {
                         ChooseNewPosition();
                     }
@@ -108,10 +110,9 @@ public class ArriveAtPoint : MonoBehaviour
                     {
                         if (!Physics.Raycast(head.position, Vector3.Normalize(player.transform.position - head.position), playerDist, playerLayer))
                         {
-                            RaycastHit hit;
-                            if (Physics.Raycast(player.transform.position, Vector3.down, out hit))
+                            if (Physics.Raycast(player.transform.position, Vector3.down, out hitt, 50f, floor))
                             {
-                                NewPosition(new Vector3(hit.point.x, hit.point.y, hit.point.z));
+                                NewPosition(new Vector3(hitt.point.x, hitt.point.y, hitt.point.z));
                             }
                         }
                     }
@@ -127,10 +128,9 @@ public class ArriveAtPoint : MonoBehaviour
                     {
                         if (!Physics.Raycast(head.position, Vector3.Normalize(player.transform.position - head.position), playerDist, playerLayer))
                         {
-                            RaycastHit hit;
-                            if (Physics.Raycast(player.transform.position, Vector3.down, out hit))
+                            if (Physics.Raycast(player.transform.position, Vector3.down, out hitt, 50f, floor))
                             {
-                                NewPosition(new Vector3(hit.point.x, hit.point.y, hit.point.z));
+                                NewPosition(new Vector3(hitt.point.x, hitt.point.y, hitt.point.z));
                             }
                         }
                     }
@@ -145,13 +145,13 @@ public class ArriveAtPoint : MonoBehaviour
                     if (angle < attackAngle && playerDist < attackDist)
                     {
                         transform.forward = new Vector3(playerDir.x, transform.forward.y, playerDir.z);
-                        agent.ResetPath();
                         Debug.Log("Here");
                         GetComponent<Animator>().SetInteger("battle", 1);
                         GetComponent<Animator>().SetInteger("moving", 0);
                         curState = MonsterState.Attacking;
+                        agent.speed = 300f;
+                        agent.acceleration = 300f;
                         AudioSource.PlayClipAtPoint(hit, transform.position);
-                        agent.enabled = false;
                     }
                     break;
                 case MonsterState.Attacking:
@@ -160,16 +160,19 @@ public class ArriveAtPoint : MonoBehaviour
                     {
                         GetComponent<Animator>().SetInteger("moving", 6);
                     }
+                    if (Physics.Raycast(player.transform.position, Vector3.down, out hitt, 50f, floor))
+                    {
+                        agent.SetDestination(new Vector3(hitt.point.x, hitt.point.y, hitt.point.z));
+                    }
                     if (attackTimer > maxAttackTimer)
                     {
                         attackTimer = 0f;
-                        curState = MonsterState.Patrolling;
-                        ChooseNewPosition();
-                        agent.enabled = true;
                         if (Pause.paused)
                         {
                             Pause.HitPause();
                         }
+                        Cursor.visible = true;
+                        Cursor.lockState = CursorLockMode.None;
                         SceneManager.LoadScene("Game Over Scene");
                     }
                     break;

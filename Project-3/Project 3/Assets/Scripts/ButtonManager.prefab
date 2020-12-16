@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7193190273989325298}
   - component: {fileID: 5743856740521367810}
+  - component: {fileID: 8965485017196204808}
   m_Layer: 0
   m_Name: ButtonManager
   m_TagString: Untagged
@@ -43,3 +44,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2227fee151ddb894b9074468b6a3b678, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8965485017196204808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762794365963857710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50bd21797697def46a6281566b77e44e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  agent: {fileID: 0}
+  light: {fileID: 0}
+  lastKnownPosition: {x: 0, y: 0, z: 0}
+  maximumSightAngle: 70
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  playerHiddenDistance: 20
+  head: {fileID: 0}
+  curState: 0
+  maxTimeSinceNoticed: 10
+  attackAngle: 30
+  attackDist: 0.5
+  maxStunTimer: 20
+  chaseAwarenessDist: 3
+  maxAttackTimer: 0.9
+  footsteps: []
+  snarls: []
+  hit: {fileID: 0}
+  footstepWalkTimer: 1
+  footstepRunTimer: 0.5
+  maxSnarlTime: 15
+  minSnarlTime: 7
