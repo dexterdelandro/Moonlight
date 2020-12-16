@@ -29,7 +29,20 @@ public class Keypad : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (keypadScreen) {
+
+            foreach (char c in Input.inputString)
+            {
+                if (c == '\n' || c == '\r') {
+                    handleInput();
+                } else if (c=='\b') {
+                    input = input.Substring(0, input.Length - 1);
+                }
+                else if (System.Char.IsDigit(c)){
+                    input += c;
+                }
+            }
+        }
     }
 
     void OnTriggerEnter(Collider other) {
@@ -62,7 +75,7 @@ public class Keypad : MonoBehaviour
         }
 
         if (keypadScreen) {
-            GUI.Box(new Rect(0, 0, 320, 400), "");
+            GUI.Box(new Rect(0, 0, 320, 460), "");
             GUI.Box(new Rect(5, 5, 310, 25), input);
 
             if (GUI.Button(new Rect(5, 35, 100, 100), "1")) {
@@ -120,19 +133,24 @@ public class Keypad : MonoBehaviour
 
             if (GUI.Button(new Rect(215, 350, 100, 100), "ENTER"))
             {
-                if (input == pass)
-                {
-                    input = "CORRECT!";
-                    exitDoor.openExitDoor();
-                }
-                else {
-                    input = "WRONG!";
-                    mustWait = true;
-                    StartCoroutine(keypadCoolDown());
-                }
+                handleInput();
                 
             }
 
+        }
+    }
+
+    private void handleInput() {
+        if (input == pass)
+        {
+            input = "CORRECT!";
+            exitDoor.openExitDoor();
+        }
+        else
+        {
+            input = "WRONG!";
+            mustWait = true;
+            StartCoroutine(keypadCoolDown());
         }
     }
 }

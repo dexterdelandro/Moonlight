@@ -6,11 +6,13 @@ public class Pause : MonoBehaviour
 {
     public static bool paused;
     private static Canvas canvas;
+    private static Canvas noteCanvas;
     // Start is called before the first frame update
     void Start()
     {
         paused = false;
         canvas = GameObject.Find("PauseCanvas").GetComponent<Canvas>();
+        noteCanvas = GameObject.Find("NoteCanvas").GetComponent<Canvas>();
     }
 
     // Update is called once per frame
@@ -22,7 +24,7 @@ public class Pause : MonoBehaviour
         }
     }
 
-    public static void HitPause()
+    public static void HitPause(bool note = false)
     {
         paused = !paused;
         if (paused)
@@ -30,7 +32,14 @@ public class Pause : MonoBehaviour
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             Time.timeScale = 0;
-            canvas.enabled = true;
+            if (note)
+            {
+                noteCanvas.enabled = true;
+            }
+            else
+            {
+                canvas.enabled = true;
+            }
         }
         else
         {
@@ -38,6 +47,7 @@ public class Pause : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Time.timeScale = 1;
             canvas.enabled = false;
+            noteCanvas.enabled = false;
         }
     }
 }

@@ -52,7 +52,7 @@ public class ArriveAtPoint : MonoBehaviour
         snarlTimer = 0f;
         curSnarlMax = Random.Range(minSnarlTime, maxSnarlTime);
         GetComponent<Animator>().SetInteger("battle", 0);
-        GetComponent<Animator>().SetInteger("moving", 0);
+        GetComponent<Animator>().SetInteger("moving", 1);
         ChooseNewPosition();
     }
 
@@ -60,11 +60,14 @@ public class ArriveAtPoint : MonoBehaviour
     {
         if (curState != MonsterState.Stunned && curState != MonsterState.Attacking)
         {
+            Debug.Log("Here");
             lastKnownPosition = position;
             curState = MonsterState.Chasing;
             timeSinceNoticed = 0f;
             GetComponent<Animator>().SetInteger("battle", 1);
-            GetComponent<Animator>().SetInteger("moving", 2);
+            if(GetComponent<Animator>().GetInteger("moving") != 2){
+                GetComponent<Animator>().SetInteger("moving", 0);
+            }
             agent.speed = 50f;
         }
     }
@@ -118,6 +121,10 @@ public class ArriveAtPoint : MonoBehaviour
                     }
                     break;
                 case MonsterState.Chasing:
+                    if (GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("batle_idle"))
+                    {
+                        GetComponent<Animator>().SetInteger("moving", 2);
+                    }
                     if (footstepTimer > footstepRunTimer)
                     {
                         footstepTimer = 0f;
@@ -140,7 +147,7 @@ public class ArriveAtPoint : MonoBehaviour
                     {
                         curState = MonsterState.Patrolling;
                         GetComponent<Animator>().SetInteger("battle", 0);
-                        GetComponent<Animator>().SetInteger("moving", 0);
+                        GetComponent<Animator>().SetInteger("moving", 1);
                     }
                     if (angle < attackAngle && playerDist < attackDist)
                     {

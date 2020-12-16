@@ -130,7 +130,7 @@ public class Candle : MonoBehaviour
         else
         {
             monster.GetComponent<Animator>().SetInteger("battle", 0);
-            monster.GetComponent<Animator>().SetInteger("moving", 0);
+            monster.GetComponent<Animator>().SetInteger("moving", 1);
         }
     }
 }
